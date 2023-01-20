@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.296c8f1a.css",
+    "main.js": "/static/js/main.9d41b16d.js",
+    "static/js/787.00067a11.chunk.js": "/static/js/787.00067a11.chunk.js",
+    "static/media/FEEDZimLogo.jpg": "/static/media/FEEDZimLogo.433950d6b6ce83b5e6c0.jpg",
+    "static/media/image_3.jpg": "/static/media/image_3.eb2478b5d4b129596955.jpg",
+    "static/media/cause-5.jpg": "/static/media/cause-5.87cdd06dfe3cc3331fed.jpg",
+    "static/media/image_1.jpg": "/static/media/image_1.ea9bc96b9ab4f0d4d709.jpg",
+    "static/media/cause-6.jpg": "/static/media/cause-6.bdffa82349b703d89aa7.jpg",
+    "static/media/image_2.jpg": "/static/media/image_2.0ff30eddff9cb49091e3.jpg",
+    "static/media/cause-2.jpg": "/static/media/cause-2.e57c55aa12c62e64e1b1.jpg",
+    "static/media/sec-1.jpg": "/static/media/sec-1.d51b98c35c78a7967d19.jpg",
+    "static/media/cause-4.jpg": "/static/media/cause-4.15244debd85be6a8273f.jpg",
+    "static/media/cause-3.jpg": "/static/media/cause-3.cfc745ffd4e61600cc89.jpg",
+    "static/media/cause-1.jpg": "/static/media/cause-1.f25448bf002cfedcc304.jpg",
+    "index.html": "/index.html",
+    "main.296c8f1a.css.map": "/static/css/main.296c8f1a.css.map",
+    "main.9d41b16d.js.map": "/static/js/main.9d41b16d.js.map",
+    "787.00067a11.chunk.js.map": "/static/js/787.00067a11.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.296c8f1a.css",
+    "static/js/main.9d41b16d.js"
+  ]
+}
