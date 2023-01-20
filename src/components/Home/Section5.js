@@ -9,10 +9,10 @@ const Section5 = ()=>{
               <p style={{fontSize:"22px"}}>Rebuilding society starts with rebuilding children, families and hence communities. We have been called and are committed to doing just that.</p>
               <p>
                 <ul style={{padding:"0px",marginTop:"48px",listStyle:"none",display:"flex",flex:"row",justifyContent:"space-between"}}>
-                    <li style={{fontSize:"18px",paddingBottom:"4px",borderBottom:"2px solid gray"}}>Feed</li>
-                    <li style={{fontSize:"18px",paddingBottom:"4px",borderBottom:"2px solid gray"}}>Educate</li>
-                    <li style={{fontSize:"18px",paddingBottom:"4px",borderBottom:"2px solid gray"}}>Empower</li>
-                    <li style={{fontSize:"18px",paddingBottom:"4px",borderBottom:"2px solid gray"}}>Develop</li>
+                    <li style={{fontWeight:"600",color:"#f86f2d",fontSize:"24px",paddingBottom:"4px",borderBottom:"2px solid #f86f2d"}}>Feed</li>
+                    <li style={{fontWeight:"600",color:"#f86f2d",fontSize:"24px",paddingBottom:"4px",borderBottom:"2px solid #f86f2d"}}>Educate</li>
+                    <li style={{fontWeight:"600",color:"#f86f2d",fontSize:"24px",paddingBottom:"4px",borderBottom:"2px solid #f86f2d"}}>Empower</li>
+                    <li style={{fontWeight:"600",color:"#f86f2d",fontSize:"24px",paddingBottom:"4px",borderBottom:"2px solid #f86f2d"}}>Develop</li>
                 </ul>
               </p>
             </div>

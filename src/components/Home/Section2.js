@@ -8,7 +8,7 @@ const Section2 = () => {
                   <div class="text">
                     <span style={{fontSize:"48px"}}>Served Over</span>
                     <strong style={{fontSize:"48px"}} class="number" data-number="1432805">1,500,000</strong> Meals
-                    <span>5,000 meals served weekly</span>
+                    <span>3,600 meals served weekly</span>
                   </div>
                 </div>
               </div>
@@ -32,7 +32,6 @@ const Section2 = () => {
               </div>
             </div>
           </div>
-          <h1 style={{textAlign:"center",fontSize:"64px",fontWeight:"600",color:"#f86f2d",padding:"128px 0px 0px 0px",background:"white",opacity:0.8}} class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Responding To A Calling.</h1>
         </section>
     )
 }

@@ -1,7 +1,7 @@
 import "./styles.css";
 const Section3 = () => {
     return(
-    <section class="ftco-section">
+    <section class="ftco-section" style={{paddingTop:"8px"}}>
     	<div class="container">
     		<div class="row">
           <div class="col-md-4 d-flex align-self-stretch ftco-animate">
