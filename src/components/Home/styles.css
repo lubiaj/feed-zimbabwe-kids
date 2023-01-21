@@ -1,15 +1,29 @@
 .hero-wrap{
     background-image: url('../../images/Pictures/sec-1.jpg');
-    height: 500px; /* You must set a specified height */
-    /* background-position: center; Center the image */
+    height: 500px;
+    /* overflow: hidden; */
+    background-size: cover;
     background-repeat: no-repeat; /* Do not repeat the image */
 
     /* width: 100vw; */
     min-width: 100%;
-  
-
 }
-
+@media only screen and (max-width: 768px) {
+    .hero-wrap{
+        /* display:none; */
+        background-image: url('../../images/Pictures/sec-1.jpg');
+        height: 500px;
+        /* overflow: hidden; */
+        background-size: contain;
+        background-repeat: no-repeat; /* Do not repeat the image */
+    
+        /* width: 100vw; */
+        min-width: 100%;
+    }
+    .ftco-intro {
+        margin-top: -250px!important;
+    }
+}
 #img{
     background-image: url('../../images/cause-1.jpg');
     height: 10vh;

@@ -2,6 +2,7 @@ import "./styles.css";
 const Section1 = () => {
     return(
       <div className="hero-wrap" data-stellar-background-ratio="0.5">
+        {/* <img alt="" style={{width:"100%"}} src="../../images/Pictures/sec-1.jpg"/> */}
         <div class="overlay"></div>
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">

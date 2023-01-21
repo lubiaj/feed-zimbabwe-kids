@@ -7696,6 +7696,12 @@ h1, h2, h3, h4, h5,
 
 .ftco-intro {
   margin-top: -80px; }
+  /* @media only screen and (max-width: 768px) { */
+    @media (max-width: 768px) {
+      .ftco-intro {
+          margin-top: -250px;
+      }
+  }
   .ftco-intro.ftco-intro-2 {
     margin-top: 0 !important; }
   .ftco-intro .block-18 {
@@ -7717,6 +7723,12 @@ h1, h2, h3, h4, h5,
       display: block;
       color: #000;
       font-size: 24px; }
+    @media (max-width:768px) {
+      .ftco-intro .block-18 .text span {
+        display: block;
+        color: #000;
+        font-size: 22px; }
+    }
 
 .services .icon {
   -webkit-border-radius: 50%;
