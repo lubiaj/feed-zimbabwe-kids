@@ -4,7 +4,7 @@ const Section3 = () => {
         <>
         <section class="ftco-section" style={{padding:"0px 0px 7em 0px"}}>
     	<div class="container">
-			<h1 style={{textAlign:"center",fontSize:"64px",fontWeight:"600",color:"#f86f2d",padding:"64px 0px",background:"white",opacity:0.8}} class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Responding To A Call</h1>
+			<h1 className="resp-to-a-call-about" style={{textAlign:"center",fontSize:"64px",fontWeight:"600",color:"#f86f2d",background:"white",opacity:0.8}} class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Responding To A Call</h1>
 			<div class="row d-flex" style={{}}>  
     			<div class="col-md-6 d-flex ftco-animate" style={{flexDirection:"column"}}>
     				{/* <div style={{backgroundPosition:"top",backgroundSize:"auto"}} class="img img-about align-self-stretch" id="bg_13"> */}

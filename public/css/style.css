@@ -7473,9 +7473,17 @@ h1, h2, h3, h4, h5,
 
 .hero-wrap {
   width: 100%;
-  height: calc(100vh - 117px);
-  min-height: 700px;
+  /* height: calc(100vh - 117px); */
+  /* min-height: 700px; */
   position: relative; }
+@media (min-width:768px){
+  .hero-wrap {
+    width: 100%;
+    /* display:none; */
+    /* height: calc(100vh - 117px); */
+    min-height: 700px;
+    position: relative; }
+}
   .hero-wrap.hero-wrap-2 {
     height: 600px; }
   .hero-wrap .overlay {
@@ -7699,7 +7707,7 @@ h1, h2, h3, h4, h5,
   /* @media only screen and (max-width: 768px) { */
     @media (max-width: 768px) {
       .ftco-intro {
-          margin-top: -250px;
+          margin-top: -150px;
       }
   }
   .ftco-intro.ftco-intro-2 {
