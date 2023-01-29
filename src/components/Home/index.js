@@ -15,7 +15,7 @@ const Home = () => {
     // console.log(accept)
     return(
         <>
-            <Stripe_El/>
+            {/* <Stripe_El/> */}
             <Section1/>
             <Section2/>
             <Keyline/>

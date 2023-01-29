@@ -1,57 +1,65 @@
 import Swal from 'sweetalert2'
 import { useEffect, useState } from 'react'
 import Stripe_El from './Stripe'
+import Stripe from 'stripe';
+const stripe = new Stripe(process.env.REACT_APP_stripe_sk);
 const popup = () => {
     Swal.fire({
-        title: 'Write you donation amount.',
+        title: 'Feed Zimbabwe kids by your donation',
         html:   "<div class=''>" +
-                    "<input class='amount-input' type='text' id='amount'/>" +
+                    "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' id='amount'/>" +
                     "<label>" +
-                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to monthly recuring payment." +
+                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to donate." +
                     "</label>" +
                 "</div>",
+        allowOutsideClick: false,
         // inputPlaceholder:
         //   'I agree with the terms and conditions',
+        showCancelButton: true,
+        cancelButtonText: "Close",
+        confirmButtonColor: "rgb(248, 111, 45)",
         confirmButtonText:
-          'Continue <i class="fa fa-arrow-right"></i>',
+          'Proceed the donation <i class="fa fa-arrow-right"></i>',
         inputValidator: (result) => {
           console.log(document.getElementById('amount'))
+          if(!document.getElementById('amount').value) {
+            return "Now alowed"
+          }
         },
         preConfirm: () => {
-            return [
-              document.getElementById('amount').value,
-              document.getElementById('is-subscription').value
-            ]
+            return {
+              amount: document.getElementById('amount').value,
+              mode: document.getElementById('is-subscription').checked == true ? 'subscription' : 'payment'
+            }
         }
     }).then(result => {
         console.log(result)
-        var amount = 1000; // Amount in cents
-        var currency = 'USD';
-        // console.log(stripe.checkout)
-        console.log(process.env.stripe_sk)
-        console.log(process.env.stripe_pk)
-        // Create the Checkout Session
-        // stripe.checkout.sessions.create({
-        //   payment_method_types: ['card'],
-        //   line_items: [{
-        //     name: 'Single Payment',
-        //     description: 'One time payment',
-        //     amount: amount,
-        //     currency: currency,
-        //     quantity: 1,
-        //   }],
-        //   success_url: 'https://example.com/success',
-        //   cancel_url: 'https://example.com/cancel',
-        // }, function(err, session) {
-        //   if (err) {
-        //     console.log(err);
-        //   } else {
-        //     // Redirect the customer to the Checkout page
-        //     console.log(session.url)
-        //     // window.location.href = session.url;
-        //   }
-        // });
+        create_payment_url(result.value.amount, result.value.mode)
     })
+}
+const create_payment_url = ( amount, mode) => {
+  // Create the Checkout Session
+  console.log(mode)
+  stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: [{
+      name: mode == 'payment' ? 'Donation for Zimbabwe kids' : 'Recurring donation for Zimbabwe kids',
+      // description: 'One time payment',
+      amount: parseInt(amount * 100),
+      currency: 'usd',
+      quantity: 1,
+    }],
+    success_url: 'https://feedzim.org/success',
+    cancel_url: 'https://feedzim.org/',
+  }, function(err, session) {
+    if (err) {
+      console.log(err);
+    } else {
+      // Redirect the customer to the Checkout page
+      // console.log(session.url)
+      window.location.href = session.url;
+    }
+  });
 }
 const Section2 = () => {
     return(
