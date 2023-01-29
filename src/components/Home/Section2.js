@@ -1,5 +1,4 @@
 import Swal from 'sweetalert2'
-import { useEffect, useState } from 'react'
 import Stripe from 'stripe';
 const stripe = new Stripe(process.env.REACT_APP_stripe_sk);
 const popup = () => {
@@ -12,23 +11,27 @@ const popup = () => {
                     "</label>" +
                 "</div>",
         allowOutsideClick: false,
-        // inputPlaceholder:
-        //   'I agree with the terms and conditions',
         showCancelButton: true,
         cancelButtonText: "Close",
         confirmButtonColor: "rgb(248, 111, 45)",
         confirmButtonText:
           'Proceed the donation <i class="fa fa-arrow-right"></i>',
         inputValidator: (result) => {
-          console.log(document.getElementById('amount'))
-          if(!document.getElementById('amount').value) {
-            return "Now alowed"
-          }
+          console.log(result)
         },
-        preConfirm: () => {
-            return {
+        preConfirm: (value) => {
+            console.log(value)
+            let output = {
               amount: document.getElementById('amount').value,
               mode: document.getElementById('is-subscription').checked == true ? 'subscription' : 'payment'
+            }
+            if( !output.amount ) {
+              Swal.showValidationMessage(
+                'Please put a valid amount'
+              )
+              return false
+            } else {
+              return output
             }
         }
     }).then(result => {
@@ -54,8 +57,6 @@ const create_payment_url = ( amount, mode) => {
     if (err) {
       console.log(err);
     } else {
-      // Redirect the customer to the Checkout page
-      // console.log(session.url)
       window.location.href = session.url;
     }
   });

@@ -13,9 +13,9 @@ import {
 const ThankYou = () => {
   return (
     <>
-      <div style={{height:"auto",fontSize:"20px",padding:"184px 0px",textAlign:"center"}}>
+      <div style={{height:"auto",fontSize:"20px",padding:"184px 0px 64px 0px",textAlign:"center"}}>
         <h1 style={{fontSize:"48px",marginBottom:"32px"}}>Thank you for the donation</h1>
-        <img src={ThankYouImg}/>
+        <img style={{width:"100%",height:"auto"}} src={ThankYouImg}/>
       </div>
     </>
   )
