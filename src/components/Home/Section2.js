@@ -1,15 +1,14 @@
 import Swal from 'sweetalert2'
 import { useEffect, useState } from 'react'
-import Stripe_El from './Stripe'
 import Stripe from 'stripe';
 const stripe = new Stripe(process.env.REACT_APP_stripe_sk);
 const popup = () => {
     Swal.fire({
-        title: 'Feed Zimbabwe kids by your donation',
+        title: 'Giving To FEED Zimbabwe Kids',
         html:   "<div class=''>" +
-                    "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' id='amount'/>" +
+                    "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' placeholder='Donation amount' id='amount'/>" +
                     "<label>" +
-                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to donate." +
+                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to donate this amount every month." +
                     "</label>" +
                 "</div>",
         allowOutsideClick: false,
@@ -49,7 +48,7 @@ const create_payment_url = ( amount, mode) => {
       currency: 'usd',
       quantity: 1,
     }],
-    success_url: 'https://feedzim.org/success',
+    success_url: 'https://feedzim.org/thankyou',
     cancel_url: 'https://feedzim.org/',
   }, function(err, session) {
     if (err) {

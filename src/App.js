@@ -1,31 +1,35 @@
-import React,{useState,useRef,useEffect} from "react";
+import React from "react";
 import Nav from "./components/Nav";
-// import Home from "./components/Home";
 import Home from "./components/Home"
 import About from "./components/about"
 import Footer from "./components/Footer";
+import ThankYouImg from "./images/thankyou.jpeg"
+import {
+  Routes,
+  Route,
+  BrowserRouter
+} from "react-router-dom"
 
-
-function App() {
-  const [page, setPage] = useState(1)
-  // const the_page_no = useRef(1)
-  // useEffect(() => {
-  //   if( the_page_no.current == 1 ) {
-  //     the_page_no.current = 2
-  //   } else if ( the_page_no.current == 2 ) {
-  //     the_page_no.current = 1
-  //   }
-  // },[page])
+const ThankYou = () => {
   return (
-    <div>
-      <Nav setPage={setPage} page={page}/>
-      {/* { the_page_no.current === 1 && <Home/> } */}
-      { page === 1 && <Home/> }
-      {/* { the_page_no.current === 2 && <About/> } */}
-      { page === 2 && <About/> }
-      <Footer setPage={setPage}/>
-    </div>
-  );
+    <>
+      <div style={{height:"auto",fontSize:"20px",padding:"184px 0px",textAlign:"center"}}>
+        <h1 style={{fontSize:"48px",marginBottom:"32px"}}>Thank you for the donation</h1>
+        <img src={ThankYouImg}/>
+      </div>
+    </>
+  )
+}
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<><Nav page={1}/><Home /><Footer/></>} />
+        <Route path="/about" element={<><Nav page={2}/><About /><Footer/></>} />
+        <Route path="/thankyou" element={<><Nav page={3}/><ThankYou/><Footer/></>} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
