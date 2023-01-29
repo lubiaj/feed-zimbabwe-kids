@@ -1,3 +1,58 @@
+import Swal from 'sweetalert2'
+import { useEffect, useState } from 'react'
+import Stripe_El from './Stripe'
+const popup = () => {
+    Swal.fire({
+        title: 'Write you donation amount.',
+        html:   "<div class=''>" +
+                    "<input class='amount-input' type='text' id='amount'/>" +
+                    "<label>" +
+                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to monthly recuring payment." +
+                    "</label>" +
+                "</div>",
+        // inputPlaceholder:
+        //   'I agree with the terms and conditions',
+        confirmButtonText:
+          'Continue <i class="fa fa-arrow-right"></i>',
+        inputValidator: (result) => {
+          console.log(document.getElementById('amount'))
+        },
+        preConfirm: () => {
+            return [
+              document.getElementById('amount').value,
+              document.getElementById('is-subscription').value
+            ]
+        }
+    }).then(result => {
+        console.log(result)
+        var amount = 1000; // Amount in cents
+        var currency = 'USD';
+        // console.log(stripe.checkout)
+        console.log(process.env.stripe_sk)
+        console.log(process.env.stripe_pk)
+        // Create the Checkout Session
+        // stripe.checkout.sessions.create({
+        //   payment_method_types: ['card'],
+        //   line_items: [{
+        //     name: 'Single Payment',
+        //     description: 'One time payment',
+        //     amount: amount,
+        //     currency: currency,
+        //     quantity: 1,
+        //   }],
+        //   success_url: 'https://example.com/success',
+        //   cancel_url: 'https://example.com/cancel',
+        // }, function(err, session) {
+        //   if (err) {
+        //     console.log(err);
+        //   } else {
+        //     // Redirect the customer to the Checkout page
+        //     console.log(session.url)
+        //     // window.location.href = session.url;
+        //   }
+        // });
+    })
+}
 const Section2 = () => {
     return(
         <section class="ftco-counter ftco-intro" id="section-counter">
@@ -17,7 +72,10 @@ const Section2 = () => {
                   <div class="text text-center">
                     <h3 style={{fontSize:"48px"}} class="mb-4">Giving</h3>
                     <p style={{fontSize:"22px",fontWeight:"400",minHeight:"220px"}}>Empowering society starts with rebuilding children, families and hence communities.</p>
-                    <p><a href="/" style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Give Now</a></p>
+                    <p>
+                      <button onClick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Give Now</button>
+                      {/* <a href="#" onclick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Give Now</a> */}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -26,7 +84,10 @@ const Section2 = () => {
                   <div class="text text-center">
                     <h3 style={{fontSize:"48px"}} class="mb-4">Get Involved</h3>
                     <p style={{fontSize:"22px",fontWeight:"400"}}>Opportunities to be the hands and feet of Jesus</p>
-                    <p><a href="/" style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Get Involved</a></p>
+                    <p>
+                      {/* <a href="#" onclick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Get Involved</a> */}
+                      <button onClick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Get Involved</button>
+                    </p>
                   </div>
                 </div>
               </div>
