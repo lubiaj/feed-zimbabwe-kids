@@ -42,18 +42,30 @@ const popup = () => {
 const create_payment_url = ( amount, mode) => {
   // Create the Checkout Session
   console.log(mode)
-  stripe.checkout.sessions.create({
+  let session_data = {
     payment_method_types: ['card'],
-    line_items: [{
-      name: mode == 'payment' ? 'Donation for Zimbabwe kids' : 'Recurring donation for Zimbabwe kids',
-      // description: 'One time payment',
-      amount: parseInt(amount * 100),
-      currency: 'usd',
-      quantity: 1,
-    }],
+    mode: mode,
     success_url: 'https://feedzim.org/thankyou',
-    cancel_url: 'https://feedzim.org/',
-  }, function(err, session) {
+    cancel_url: 'https://feedzim.org/'
+  }
+  session_data.line_items = [
+    {
+      quantity: 1,
+      price_data: {
+        currency: 'usd',
+        product_data: {
+          name: 'Giving To FEED Zimbabwe Kids',
+        },
+        unit_amount: parseInt(amount * 100),
+      }
+    }
+  ]
+  if( mode != 'payment' ) {
+    session_data.line_items[0].price_data.recurring = {
+      interval: 'month'
+    }
+  }
+  stripe.checkout.sessions.create(session_data, function(err, session) {
     if (err) {
       console.log(err);
     } else {
