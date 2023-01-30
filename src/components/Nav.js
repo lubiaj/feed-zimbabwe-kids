@@ -1,4 +1,5 @@
 import logo from "../images/FEEDZimLogo.jpg";
+import popup from './Home/Stripe'
 import "./nav.css"
 const Nav = ({page}) => {
   console.log(page)
@@ -10,9 +11,17 @@ const Nav = ({page}) => {
               <span class="oi oi-menu"></span> Menu
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
-              <ul class="navbar-nav ml-auto">
+              <ul class="navbar-nav ml-auto responsive-nav">
                 <li className={page === 1 ? "nav-item active" :"nav-item"} ><a style={{cursor:"pointer"}} href="/" class="nav-link">Home</a></li>
                 <li className={page === 2 ? "nav-item active" :"nav-item"}><a style={{cursor:"pointer"}} href="/about" class="nav-link">About</a></li>
+                <li><a style={{
+                  background: "#f86f2d",
+                  padding: "16px",
+                  cursor: "pointer",
+                  color: "white",
+                  borderRadius: "12px",
+                  cursor:"pointer"
+                }} type="button" onClick={popup}>Give online</a></li>
               </ul>
             </div>
           </div>
