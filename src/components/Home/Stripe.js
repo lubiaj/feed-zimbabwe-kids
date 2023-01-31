@@ -5,9 +5,13 @@ const popup = () => {
     Swal.fire({
         title: 'Giving To FEED Zimbabwe Kids',
         html:   "<div class=''>" +
-                    "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' placeholder='Donation amount' id='amount'/>" +
+                    "<div style='font-size:14px;'>" +
+                      "<p>$30 – Per month to sponsors a child</p>" +
+                      "<p>$100 –Sponsors a day’s meal for the school</p>" +
+                    "</div>" +
+                    "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' placeholder='Giving To FEED Zimbabwe Kids amount' id='amount'/>" +
                     "<label>" +
-                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to donate this amount every month." +
+                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to Giving To FEED Zimbabwe Kids this amount every month." +
                     "</label>" +
                 "</div>",
         allowOutsideClick: false,

@@ -27,7 +27,7 @@ const Section3 = () => {
               <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
               <div class="media-body pl-4">
                 <h3 class="heading" style={{fontSize:"36px"}}>Sponsorship</h3>
-                <p style={{fontSize:"20px"}}>Provide tuitioin and school necessities to students; Fund project for safe available water to school; Equip classroom with white boards</p>
+                <p style={{fontSize:"20px"}}>Provide tuition and school necessities to students; Fund project for safe available water to school; Equip classrooms with enough resources for learners</p>
               </div>
             </div>    
           </div>
