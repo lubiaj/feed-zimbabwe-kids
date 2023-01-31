@@ -6,12 +6,12 @@ const popup = () => {
         title: 'Giving To FEED Zimbabwe Kids',
         html:   "<div class=''>" +
                     "<div style='font-size:14px;'>" +
-                      "<p>$30 – Per month to sponsors a child</p>" +
-                      "<p>$100 –Sponsors a day’s meal for the school</p>" +
+                      "<p>$30 – Per month to Sponsor a Child</p>" +
+                      "<p>$100 – Sponsors a day's meal for the School</p>" +
                     "</div>" +
-                    "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' placeholder='Giving To FEED Zimbabwe Kids amount' id='amount'/>" +
+                    "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' placeholder='Please enter amount' id='amount'/>" +
                     "<label>" +
-                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to Giving To FEED Zimbabwe Kids this amount every month." +
+                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to Give this amount every month." +
                     "</label>" +
                 "</div>",
         allowOutsideClick: false,
@@ -19,7 +19,7 @@ const popup = () => {
         cancelButtonText: "Close",
         confirmButtonColor: "rgb(248, 111, 45)",
         confirmButtonText:
-          'Proceed the donation <i class="fa fa-arrow-right"></i>',
+          'Proceed with Giving <i class="fa fa-arrow-right"></i>',
         inputValidator: (result) => {
           console.log(result)
         },
