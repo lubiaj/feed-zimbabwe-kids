@@ -1,4 +1,4 @@
-import logo from "../images/FEEDZimLogo.jpg";
+import logo from "../images/Logo.png";
 import popup from './Home/Stripe'
 import "./nav.css"
 const Nav = ({page}) => {
