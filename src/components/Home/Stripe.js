@@ -25,11 +25,11 @@ const popup = () => {
                     "</div>" +
                     "<select style='padding:16px;margin-bottom:16px;width:100%;' id='select_package'>" +
                       "<option value='' selected disabled>Please select package</option>" +
-                      "<option value='https://donate.stripe.com/dR65lL9ln1qbdTq5ks'>Sponsor 100 students</option>" +
-                      "<option value='https://donate.stripe.com/00g7tTbtv4Cn6qYfZ5'>Towards the building fund</option>" +
-                      "<option value='https://donate.stripe.com/5kA29z8hj6Kv8z6fZ4'>Sponsor 10 children to school a semester</option>" +
-                      "<option value='https://donate.stripe.com/28o4hH2WZ5Gr16EaEJ'>Tuition for a year</option>" +
-                      "<option value='https://donate.stripe.com/14kbK9cxzecXcPmeUY'>Tuition for a child a semester</option>" +
+                      "<option value='https://donate.stripe.com/dR65lL9ln1qbdTq5ks'>$2,500 - Sponsor 100 students</option>" +
+                      "<option value='https://donate.stripe.com/00g7tTbtv4Cn6qYfZ5'>$1,000 - Towards the building fund</option>" +
+                      "<option value='https://donate.stripe.com/5kA29z8hj6Kv8z6fZ4'>$250 - Sponsor 10 children to school a semester</option>" +
+                      "<option value='https://donate.stripe.com/28o4hH2WZ5Gr16EaEJ'>$75 - Tuition for a year</option>" +
+                      "<option value='https://donate.stripe.com/14kbK9cxzecXcPmeUY'>$25 - Tuition for a child a semester</option>" +
                     "</select>" +
                 "</div>",
         allowOutsideClick: false,
