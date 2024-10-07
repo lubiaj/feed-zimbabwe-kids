@@ -3,6 +3,7 @@ import Section2 from "./Section2";
 import Section3 from "./Section3";
 import Section4 from "./Section4";
 import Section5 from "./Section5";
+import Mission from "./Mission";
 import Section6 from "./Section6";
 import Keyline from "./Keyline";
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
             <Section3/>
             <Section6/>
             <Section5/>
+            <Mission/>
             <Section4/>
         </>
     )

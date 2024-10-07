@@ -1,7 +1,7 @@
 import "./styles.css";
 const Section4 = () => {
     return(
-        <section class="ftco-section bg-light">
+        <section class="ftco-section">
     	<div class="container-fluid">
     		<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-5 heading-section ftco-animate">
