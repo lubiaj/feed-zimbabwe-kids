@@ -6,15 +6,15 @@ const popup = () => {
         title: 'Giving To FEED Zimbabwe Kids',
         html:   "<div class=''>" +
                     "<div style='font-size:14px;'>" +
-                      "<p>$30 – Per month to Sponsor a Child</p>" +
+                      "<p>$30 – Per month to Sponsor a Child's meal</p>" +
                       "<p>$100 – Sponsors a day's meal for the School</p>" +
                     "</div>" +
                     "<div style='display:flex;justify-content:center;align-items:center; gap:24px;margin:6px 0'>" +
-                      "<label for='any_amount' style='display: flex; align-items: center; gap: 4px;'>" +
-                          "<input class='' type='radio' id='any_amount' name='amount_tpe' checked/> Any amount" +
-                      "</label>" +
                       "<label for='package_amount' style='display: flex; align-items: center; gap: 4px;'>" +
-                          "<input class='is-subscription' type='radio' id='package_amount' name='amount_tpe'/> Package amount" +
+                          "<input class='is-subscription' type='radio' id='package_amount' name='amount_tpe' checked/> Tuition donation" +
+                      "</label>" +
+                      "<label for='any_amount' style='display: flex; align-items: center; gap: 4px;'>" +
+                          "<input class='' type='radio' id='any_amount' name='amount_tpe'/> Any donation" +
                       "</label>" +
                     "</div>" +
                     "<div id='amount_checkbox_div'>" +
@@ -24,12 +24,12 @@ const popup = () => {
                       "</label>" +
                     "</div>" +
                     "<select style='padding:16px;margin-bottom:16px;width:100%;' id='select_package'>" +
-                      "<option value='' selected disabled>Please select package</option>" +
-                      "<option value='https://donate.stripe.com/dR65lL9ln1qbdTq5ks'>$2,500 - Sponsor 100 students</option>" +
+                      "<option value='' selected disabled>Please select a donation</option>" +
+                      "<option value='https://donate.stripe.com/dR65lL9ln1qbdTq5ks'>$2,500 - Sponsor tuition for 100 children a semester</option>" +
                       "<option value='https://donate.stripe.com/00g7tTbtv4Cn6qYfZ5'>$1,000 - Towards the building fund</option>" +
-                      "<option value='https://donate.stripe.com/5kA29z8hj6Kv8z6fZ4'>$250 - Sponsor 10 children to school a semester</option>" +
-                      "<option value='https://donate.stripe.com/28o4hH2WZ5Gr16EaEJ'>$75 - Tuition for a year</option>" +
-                      "<option value='https://donate.stripe.com/14kbK9cxzecXcPmeUY'>$25 - Tuition for a child a semester</option>" +
+                      "<option value='https://donate.stripe.com/5kA29z8hj6Kv8z6fZ4'>$250 - Sponsor tuition for 10 children a semester</option>" +
+                      "<option value='https://donate.stripe.com/28o4hH2WZ5Gr16EaEJ'>$75 - Sponsor a child tuition for a year</option>" +
+                      "<option value='https://donate.stripe.com/14kbK9cxzecXcPmeUY'>$25 - Sponsor a child tuition for a semester</option>" +
                     "</select>" +
                 "</div>",
         allowOutsideClick: false,
@@ -47,8 +47,8 @@ const popup = () => {
           const select_package = document.getElementById('select_package');
           const any_amount_radio = document.getElementById('any_amount');
           const package_amount_radio = document.getElementById('package_amount');
-          amount_checkbox_div.style.display = 'block';  
-          select_package.style.display = 'none';
+          amount_checkbox_div.style.display = 'none';  
+          select_package.style.display = 'block';
           any_amount_radio.addEventListener('change', () => {
             Swal.resetValidationMessage();
             amount_checkbox_div.style.display = 'block';

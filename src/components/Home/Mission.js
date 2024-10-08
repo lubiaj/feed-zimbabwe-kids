@@ -5,7 +5,7 @@ const Section5 = ()=>{
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-              <h2 class="mb-4" style={{fontSize:"48px"}}>Mission</h2>
+              <h2 class="mb-4" style={{fontSize:"48px", color: "#f86f2d"}}>Mission</h2>
               <p style={{fontSize:"22px"}}>We are a Holy Spirit led ministry committed to remain Christ-centered and focused on holistically serving vulnerable children and communities in rural Zimbabwe.</p>
               <p style={{fontSize:"22px"}}>Our mission is motivated by Love - Love of God and love for people.</p>
               <p style={{fontSize:"22px"}}>Love one another as I have loved you (John 13:34)</p>
