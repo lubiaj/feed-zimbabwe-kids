@@ -20,7 +20,7 @@ const popup = () => {
                     "<div id='amount_checkbox_div'>" +
                       "<input style='padding:16px;margin-bottom:16px;width:100%;' type='text' placeholder='Please enter amount' id='amount'/>" +
                       "<label style='display: block; text-align: left;'>" +
-                        "<input class='is-subscription' type='checkbox' id='is-subscription'/> I want to Give this amount every month." +
+                        "<input class='is-subscription' type='checkbox' id='is-subscription' checked/> I want to Give this amount every month." +
                       "</label>" +
                     "</div>" +
                     "<select style='padding:16px;margin-bottom:16px;width:100%;' id='select_package'>" +
