@@ -22,8 +22,8 @@ const popup = () => {
         title: 'Giving To FEED Zimbabwe Kids',
         html:   "<div class=''>" +
                     "<div style='font-size:14px;'>" +
-                      "<p>$30 – Per month to Sponsor a Child's meal</p>" +
-                      "<p>$100 – Sponsors a day's meal for the School</p>" +
+                      "<p>$40 – Per month to Sponsor a Child's meal</p>" +
+                      "<p>$200 – Sponsors a day's meal for the School</p>" +
                     "</div>" +
                     "<div style='display:flex;justify-content:center;align-items:center; gap:24px;margin:6px 0'>" +
                       "<label for='package_amount' style='display: flex; align-items: center; gap: 4px;'>" +
