@@ -19,7 +19,8 @@ const Section2 = () => {
                     <h3 style={{fontSize:"48px"}} class="mb-4">Giving</h3>
                     <p style={{fontSize:"22px",fontWeight:"400",minHeight:"220px"}}>Empowering society starts with rebuilding children, families and hence communities.</p>
                     <p>
-                      <button onClick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Give Now</button>
+                      {/* <button onClick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Give Now</button> */}
+                      <a href="https://feedzim.networkforgood.com/projects/238692-giving-to-f-e-e-d--" style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Give Now</a>
                       {/* <a href="#" onclick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Give Now</a> */}
                     </p>
                   </div>
@@ -32,7 +33,8 @@ const Section2 = () => {
                     <p style={{fontSize:"22px",fontWeight:"400"}}>Opportunities to be the hands and feet of Jesus</p>
                     <p>
                       {/* <a href="#" onclick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Get Involved</a> */}
-                      <button onClick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Get Involved</button>
+                      {/* <button onClick={popup} style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Get Involved</button> */}
+                      <a href="https://feedzim.networkforgood.com/projects/238692-giving-to-f-e-e-d--" style={{position:"absolute",left:"40px",width:"calc(100% - 80px)",bottom:"24px",fontSize:"22px"}} class="btn btn-white px-3 py-2 mt-2">Get Involved</a>
                     </p>
                   </div>
                 </div>
