@@ -21,7 +21,7 @@ const Nav = ({page}) => {
                   color: "white",
                   borderRadius: "12px",
                   cursor:"pointer"
-                }} type="button" onClick={popup}>Give online</a></li>
+                }} type="button" href="https://feedzim.networkforgood.com/projects/238692-giving-to-f-e-e-d--">Give online</a></li>
               </ul>
             </div>
           </div>
